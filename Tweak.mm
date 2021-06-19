@@ -4,7 +4,7 @@
 #include <dlfcn.h>
 
 #ifdef DEBUG
-    #define DLog(FORMAT, ...) fprintf(stderr, "+[SSLBypass] %s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+    #define DLog(FORMAT, ...) fprintf(stderr, "+[SSLKiller] %s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #else 
     #define DLog(...) (void)0
 #endif
@@ -69,7 +69,7 @@ static char *(*original_SSL_get_psk_identity)(void *ssl);
 static char *replaced_SSL_get_psk_identity(void *ssl) {
 	DLog(@"replaced_SSL_get_psk_identity");
 
-    return (char *)"SSLByPass-NotRealPSK";
+    return (char *)"SSLKiller-NotRealPSK";
 }
 
 %end
