@@ -1,0 +1,9 @@
+Package: com.namdevel.sslkiller
+Name: SSLKiller
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: SSLKiller will bypass SSL pinning from iOS 8 - 14
+Maintainer: NAMDEVEL
+Author: NAMDEVEL
+Section: Tweaks
